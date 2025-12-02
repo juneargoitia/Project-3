@@ -1,0 +1,22 @@
+public class Main {
+
+    private static final SystemMonitor monitor = new SystemMonitor();
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("=== Early-Warning System Simulator ===");
+
+        String command = askCommand(scanner);
+
+        while (!command.equals("exit")) {
+            try {
+                process(command);
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+            command = askCommand(scanner);
+        }
+
+        System.out.println("System shutting down.");
+    }

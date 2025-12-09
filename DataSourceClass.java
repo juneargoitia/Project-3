@@ -1,3 +1,8 @@
+/**
+ * Represents an external data source that feeds information
+ * into the Early-Warning System (e.g. hospitals, satellites, sensors).
+ */
+
 public class DataSource {
 
     private static int ID = 0;      // common counter 
@@ -11,12 +16,26 @@ public class DataSource {
         this.type = type;
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
-    public String getType() { return type; }
+    public int getId() { 
+        return id; 
+    }
+    
+    public String getName() { 
+        return name; 
+    }
+
+    public String getType() { 
+        return type; 
+    }
 
     @Override
     public String toString() {
         return "[" + id + "] " + name + " (" + type + ")";
     }
+}
+
+    @Override
+    public String toString() {
+        return "[" + id + "] " + name + " (" + type + ")";
+    }
 }

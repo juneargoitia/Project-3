@@ -1,0 +1,18 @@
+/**
+ * Represents the severity of a crisis event.
+ * Using an enum avoids string errors and makes the code easier to extend.
+ */
+public enum Severity {
+    GREEN,
+    YELLOW,
+    ORANGE,
+    RED;
+
+    /**
+     * Maps a string (case-insensitive) to a Severity enum.
+     * Throws IllegalArgumentException if the value is not valid.
+     */
+    public static Severity fromString(String value) {
+        return Severity.valueOf(value.trim().toUpperCase());
+    }
+}
